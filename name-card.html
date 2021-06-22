@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap.css" />
+    <style>
+        @media screen and (min-width: 768px) {
+            main {
+                margin-left: 25rem;
+            }
+            img {
+                width: 20em;
+                height: 23em;
+            }
+
+            .position-absolute {
+                left: 0;
+            }
+
+            .container::before {
+                content: "";
+                width: 12rem;
+                height: 8rem;
+                position: absolute;
+                background: white;
+                border-top: 2px solid lightgray;
+                top: 320px;
+                left: -120px;
+                z-index: 1;
+                transform: rotate(45deg);
+            }
+    
+            .container::after {
+                content: "";
+                width: 12rem;
+                height: 8rem;
+                position: absolute;
+                background: white;
+                border-top: 2px solid lightgray;
+                top: -80px;
+                right: -120px;
+                z-index: 1;
+                transform: rotate(225deg);
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <!-- 大 -->
+    <div class="container mt-5 w-75 border shadow-sm bg-white d-flex position-relative d-sm-none d-md-block">
+      <div class="position-absolute">
+        <img src="logo.png"/>
+      </div>
+      <main class="p-5 mt-2 ml-10">
+        <div class="name mb-5">
+          <h4>Front-End Designer</h3>
+          <h1>張 五 杰</h1>
+          <h4>泰 山 職 訓 局</h3>
+        </div>
+
+        <div class="content lh-lx">
+            <div>
+                住址:新北市泰山區貴子里致遠新村55之1號
+            </div>
+            <div>
+                電話:02-2901-8274
+            </div>
+            <div>
+                E-Mail:Test@test.ccom 
+            </div>
+            <div>
+                網站:https://www.google.com
+            </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- 小 -->
+    <div class="card border shadow-sm bg-white d-md-none d-sm-block">
+        <img src="logo.png" class="card-img-top"/>
+        <main class="card-body p-5">
+            <div class="mt-5">
+                <h4>Front-End Designer</h3>
+                <h1>張 五 杰</h1>
+                <h4>泰 山 職 訓 局</h3>
+            </div>
+    
+            <div class="mt-5 lh-lx">
+                <div>
+                    住址:新北市泰山區貴子里致遠新村55之1號
+                </div>
+                <div>
+                    電話:02-2901-8274
+                </div>
+                <div>text-center
+                    E-Mail:Test@test.ccom 
+                </div>
+                <div>
+                    網站:https://www.google.com
+                </div>
+            </div>
+          </main>
+    </div>
+
+    <script src="./bootstrap.bundle.js"></script>
+  </body>
+</html>
